@@ -1,0 +1,25 @@
+/*** TYPESCRIPT SET UP ***/
+yarn add -D @types/node typescript
+
+yarn add -D ts-node
+
+/*** Mikro-orm dependancies ***/
+yarn add @mikro-orm/cli @mikro-orm/core
+        @mikro-orm/migrations @mikro-orm/postgresql 
+        pg
+
+npx mikro-orm migration:create
+
+/*** Setting up server ***/ 
+yarn add express apollo-server-express graphql type-graphql
+
+yarn add -D @types/express
+
+yarn add reflect-metadata
+
+
+/*** SETTING UP MODE TO ADD SESSION COOKIES ***/
+yarn add redis connect-redis express-session
+
+(the redis imports require types, this command resolves the sqwigglies on import)
+yarn add -D @types/redis @types/express-session @types/connect-redis
